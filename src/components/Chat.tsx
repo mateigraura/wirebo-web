@@ -23,9 +23,8 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     padding: 20,
-    height: 35,
+    height: 30,
     justifyContent: "space-between",
-    // borderBottom: "1px solid yellow"
   },
   headerInfo: {
     display: "flex",
@@ -90,10 +89,10 @@ const useStyles = makeStyles({
   "@global": {
     "*::-webkit-scrollbar": {
       width: 5,
-      backgroundColor: "#131c21",
+      backgroundColor: "#162127",
     },
     "*::-webkit-scrollbar-track": {
-      backgroundColor: "#131c21"
+      backgroundColor: "#162127"
     },
     "*::-webkit-scrollbar-thumb": {
       backgroundColor: "#464649"

@@ -16,8 +16,9 @@ const useStyles = makeStyles({
   },
   sidebarWrapper: {
     display: "flex",
+    alignItems: "center",
     justifyContent: "space-between",
-    height: 35,
+    height: 30,
     padding: 20,
     borderRight: "1px solid #464649"
   },

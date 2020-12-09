@@ -1,5 +1,7 @@
 import React from 'react';
+import Container from '../components/container/Container';
 import Sidebar from "../components/Sidebar";
+import Chat from "../components/Chat";
 import Login from "./Login"
 import {
   BrowserRouter as Router,
@@ -7,24 +9,14 @@ import {
   Route
 } from "react-router-dom"
 import { makeStyles } from "@material-ui/styles";
-import Chat from "../components/Chat";
 
 interface Props {
 }
 
 const useStyles = makeStyles({
-  container: {
-    display: "grid",
-    placeItems: "center",
-    overflow: "hidden"
-    // backgroundColor: "#090e11",
-  },
-  loginContainer: {
-    marginTop: "15%"
-  },
   mainContainer: {
     display: "flex",
-    height: "94vh",
+    height: "95vh",
     width: "91vw",
     marginTop: 12,
     backgroundColor: "#262d31",
@@ -37,7 +29,7 @@ const App = (props: Props) => {
   const isLoggedIn = true
 
   return (
-    <div className={classes.container}>
+    <Container>
       {
         isLoggedIn ? (
           <div className={classes.mainContainer}>
@@ -51,12 +43,12 @@ const App = (props: Props) => {
             </Router>
           </div>
         ) : (
-          <div className={classes.loginContainer}>
+          <div>
             <Login/>
           </div>
         )
       }
-    </div>
+    </Container>
   )
 }
 
