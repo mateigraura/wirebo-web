@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react"
-import { Picker } from "emoji-mart";
-import { IconButton } from "@material-ui/core";
-import { InsertEmoticon } from "@material-ui/icons";
-import { useOnClickOutside } from "../hooks/useOnClickOutside"
+import { Picker } from "emoji-mart"
+import "emoji-mart/css/emoji-mart.css"
+import { IconButton } from "@material-ui/core"
+import { InsertEmoticon } from "@material-ui/icons"
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 interface Props {
   appendEmoji: any

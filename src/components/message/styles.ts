@@ -1,12 +1,6 @@
-import React from "react"
 import { makeStyles } from "@material-ui/styles";
-import { DoneAll } from "@material-ui/icons";
 
-interface Props {
-  message: any
-}
-
-const useStyles = makeStyles({
+export const useStyles = makeStyles({
   messageSent: {
     color: "#e7e9ee",
     fontFamily: "sans-serif",
@@ -51,18 +45,3 @@ const useStyles = makeStyles({
     display: "inline-block"
   }
 })
-
-const Message = ({message}: Props) => {
-  const classes = useStyles()
-
-  return (
-    <div className={`${message.isMe ? classes.messageSent : classes.messageReceived}`}>
-      {message.text}
-      <div className={classes.metadata}>
-        <span className={classes.date}>{message.date}</span>
-      </div>
-    </div>
-  )
-}
-
-export default Message
