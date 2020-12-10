@@ -1,14 +1,15 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Avatar, IconButton } from "@material-ui/core"
 import "emoji-mart/css/emoji-mart.css";
 import EmojiPicker from "./EmojiPicker";
+import MessageFeed from "./MessageFeed";
 import {
   SearchOutlined,
   Send,
   MoreVert,
   AttachFile
 } from "@material-ui/icons";
+import { Avatar, IconButton } from "@material-ui/core"
 
 interface Props {
 }
@@ -56,6 +57,7 @@ const useStyles = makeStyles({
     backgroundColor: "#162127",
     backgroundPosition: "center",
     overflow: "scroll",
+    overflowY: "auto",
     padding: 30,
     overflowX: "hidden"
   },
@@ -100,8 +102,13 @@ const useStyles = makeStyles({
   }
 })
 
+
+const messages: any[] = []
+
 const Chat = (props: Props) => {
+  const [data, setData] = useState(messages)
   const [msgText, setMsgText] = useState("")
+  const [selectedContact, setSelectedContact] = useState({})
 
   const classes = useStyles()
 
@@ -133,7 +140,7 @@ const Chat = (props: Props) => {
         </div>
       </div>
       <div className={classes.chatBody}>
-
+        <MessageFeed/>
       </div>
       <div className={classes.chatFooter}>
         <EmojiPicker appendEmoji={appendEmoji}/>
