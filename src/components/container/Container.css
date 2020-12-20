@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100vh;
+}
+
+#main {
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #090e11;
+    place-items: center;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
